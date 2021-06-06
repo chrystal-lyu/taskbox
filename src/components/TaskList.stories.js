@@ -1,9 +1,9 @@
 import React from "react";
 
-import TaskList from "./TaskList";
+import { PureTaskList } from './TaskList';
 import * as TaskStories from "./Task.stories";
 
-const Template = (args) => <TaskList {...args} />;
+const Template = (args) => <PureTaskList {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -44,7 +44,7 @@ Empty.args = {
 };
 
 const TaskListStories = {
-  component: TaskList,
+  component: PureTaskList,
   title: "TaskList",
   decorators: [(story) => <div style={{ padding: "3rem" }}>{story()}</div>],
 };
